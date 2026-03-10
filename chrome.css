@@ -8,9 +8,9 @@
 :root:has(#theme-PywalZen[uc-pywalzen-darkness="default"]) {
   --zen-colors-tertiary: var(--lwt-accent-color) !important;
   --zen-main-browser-background: var(--lwt-accent-color) !important;
-  --zen-themed-toolbar-bg: var(--lwt-accent-color) !important;
+  --zen-themed-toolbar-bg-transparent: var(--lwt-accent-color) !important;
   --arrowpanel-background: var(--lwt-accent-color) !important;
-  #urlbar[breakout-extend="true"] > #urlbar-background {
+  #urlbar[breakout-extend="true"] > .urlbar-background {
     background: var(--lwt-accent-color) !important;
   }
 }
@@ -26,7 +26,7 @@
     var(--lwt-accent-color),
     black 25%
   ) !important;
-  --zen-themed-toolbar-bg: color-mix(
+  --zen-themed-toolbar-bg-transparent: color-mix(
     in srgb,
     var(--lwt-accent-color),
     black 25%
@@ -36,7 +36,7 @@
     var(--lwt-accent-color),
     black 25%
   ) !important;
-  #urlbar[breakout-extend="true"] > #urlbar-background {
+  #urlbar[breakout-extend="true"] > .urlbar-background {
     background: color-mix(
       in srgb,
       var(--lwt-accent-color),
@@ -56,7 +56,7 @@
     var(--lwt-accent-color),
     black 50%
   ) !important;
-  --zen-themed-toolbar-bg: color-mix(
+  --zen-themed-toolbar-bg-transparent: color-mix(
     in srgb,
     var(--lwt-accent-color),
     black 50%
@@ -66,7 +66,7 @@
     var(--lwt-accent-color),
     black 50%
   ) !important;
-  #urlbar[breakout-extend="true"] > #urlbar-background {
+  #urlbar[breakout-extend="true"] > .urlbar-background {
     background: color-mix(
       in srgb,
       var(--lwt-accent-color),
@@ -86,7 +86,7 @@
     var(--lwt-accent-color),
     black 75%
   ) !important;
-  --zen-themed-toolbar-bg: color-mix(
+  --zen-themed-toolbar-bg-transparent: color-mix(
     in srgb,
     var(--lwt-accent-color),
     black 75%
@@ -96,7 +96,7 @@
     var(--lwt-accent-color),
     black 75%
   ) !important;
-  #urlbar[breakout-extend="true"] > #urlbar-background {
+  #urlbar[breakout-extend="true"] > .urlbar-background {
     background: color-mix(
       in srgb,
       var(--lwt-accent-color),
@@ -108,15 +108,15 @@
 :root:has(#theme-PywalZen[uc-pywalzen-darkness="pitch-black"]) {
   --zen-colors-tertiary: black !important;
   --zen-main-browser-background: black !important;
-  --zen-themed-toolbar-bg: black !important;
+  --zen-themed-toolbar-bg-transparent: black !important;
   --arrowpanel-background: black !important;
-  #urlbar[breakout-extend="true"] > #urlbar-background {
+  #urlbar[breakout-extend="true"] > .urlbar-background {
     background: black !important;
   }
 }
 
 #urlbar:not([focused="true"]):not([breakout-extend="true"])
-  > #urlbar-background {
+  > .urlbar-background {
   background: color-mix(
     in srgb,
     light-dark(#fff, var(--zen-colors-secondary)) 35%,
