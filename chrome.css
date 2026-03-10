@@ -19,36 +19,6 @@
   --zen-colors-tertiary: color-mix(
     in srgb,
     var(--lwt-accent-color),
-    black 25%
-  ) !important;
-  --zen-main-browser-background: color-mix(
-    in srgb,
-    var(--lwt-accent-color),
-    black 25%
-  ) !important;
-  --zen-themed-toolbar-bg-transparent: color-mix(
-    in srgb,
-    var(--lwt-accent-color),
-    black 25%
-  ) !important;
-  --arrowpanel-background: color-mix(
-    in srgb,
-    var(--lwt-accent-color),
-    black 25%
-  ) !important;
-  #urlbar[breakout-extend="true"] > .urlbar-background {
-    background: color-mix(
-      in srgb,
-      var(--lwt-accent-color),
-      black 25%
-    ) !important;
-  }
-}
-
-:root:has(#theme-PywalZen[uc-pywalzen-darkness="darker"]) {
-  --zen-colors-tertiary: color-mix(
-    in srgb,
-    var(--lwt-accent-color),
     black 50%
   ) !important;
   --zen-main-browser-background: color-mix(
@@ -75,7 +45,7 @@
   }
 }
 
-:root:has(#theme-PywalZen[uc-pywalzen-darkness="yet-darker"]) {
+:root:has(#theme-PywalZen[uc-pywalzen-darkness="darker"]) {
   --zen-colors-tertiary: color-mix(
     in srgb,
     var(--lwt-accent-color),
@@ -101,6 +71,36 @@
       in srgb,
       var(--lwt-accent-color),
       black 75%
+    ) !important;
+  }
+}
+
+:root:has(#theme-PywalZen[uc-pywalzen-darkness="yet-darker"]) {
+  --zen-colors-tertiary: color-mix(
+    in srgb,
+    var(--lwt-accent-color),
+    black 92%
+  ) !important;
+  --zen-main-browser-background: color-mix(
+    in srgb,
+    var(--lwt-accent-color),
+    black 92%
+  ) !important;
+  --zen-themed-toolbar-bg-transparent: color-mix(
+    in srgb,
+    var(--lwt-accent-color),
+    black 92%
+  ) !important;
+  --arrowpanel-background: color-mix(
+    in srgb,
+    var(--lwt-accent-color),
+    black 92%
+  ) !important;
+  #urlbar[breakout-extend="true"] > .urlbar-background {
+    background: color-mix(
+      in srgb,
+      var(--lwt-accent-color),
+      black 92%
     ) !important;
   }
 }
