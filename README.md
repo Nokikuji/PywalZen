@@ -50,7 +50,7 @@ yay -S matugen-bin
 # Generate colors
 matugen image /path/to/your/wallpaper.jpg
 ```
-If you use a rice that already runs Matugen (e.g. Dusk's Hyprland setup), colors are already being generated — you just need to make sure the PywalFox template is configured (see the Matugen section below).
+If you use a rice that already runs Matugen (e.g. [Dusk's Hyprland setup](https://github.com/dusklinux/dusky)), colors are already being generated — you just need to make sure the PywalFox template is configured (see the Matugen section below).
 
 ---
 
@@ -177,9 +177,6 @@ Adjust in **Zen Settings → Mods → PywalZen**:
 | Level | Effect |
 |-------|--------|
 | `default` | Accent color as-is |
-| `dark` | 25% darker |
-| `darker` | 50% darker |
-| `yet-darker` | 75% darker |
 | `pitch-black` | Pure black |
 
 ---
