@@ -127,3 +127,13 @@
 #commonDialogWindow {
   background-color: black !important;
 }
+
+/* Floating urlbar / Ctrl+T new tab overlay */
+#urlbar[open][zen-floating-urlbar="true"] > .urlbar-background {
+  background-color: color-mix(
+    in srgb,
+    var(--lwt-accent-color, #1b1b1b) 75%,
+    white 25%
+  ) !important;
+  backdrop-filter: blur(20px) saturate(160%) !important;
+}
