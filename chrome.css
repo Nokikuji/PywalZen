@@ -48,6 +48,19 @@
   ) !important;
 }
 
+/* All popup panels and menus — doorhangers, context menus, dropdowns */
+:root:has(#theme-PywalZen) panel::part(content),
+:root:has(#theme-PywalZen) menupopup,
+:root:has(#theme-PywalZen) .panel-arrowcontent {
+  background-color: var(--lwt-accent-color, #1b1b1b) !important;
+}
+
+:root:has(#theme-PywalZen) panel,
+:root:has(#theme-PywalZen) menupopup {
+  --panel-background: var(--lwt-accent-color, #1b1b1b) !important;
+  --arrowpanel-background: var(--lwt-accent-color, #1b1b1b) !important;
+}
+
 #commonDialogWindow {
   background-color: black !important;
 }
