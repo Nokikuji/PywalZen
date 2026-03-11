@@ -10,24 +10,37 @@
   --zen-main-browser-background: var(--lwt-accent-color) !important;
   --zen-themed-toolbar-bg-transparent: var(--lwt-accent-color) !important;
   --arrowpanel-background: var(--lwt-accent-color) !important;
-  #urlbar[breakout-extend="true"] > .urlbar-background {
-    background: var(--lwt-accent-color) !important;
-  }
 }
-
 
 :root:has(#theme-PywalZen[uc-pywalzen-darkness="pitch-black"]) {
   --zen-colors-tertiary: black !important;
   --zen-main-browser-background: black !important;
   --zen-themed-toolbar-bg-transparent: black !important;
   --arrowpanel-background: black !important;
-  #urlbar[breakout-extend="true"] > .urlbar-background {
-    background: black !important;
-  }
 }
 
-#urlbar:not([focused="true"]):not([breakout-extend="true"])
-  > .urlbar-background {
+/* Urlbar background in expanded/breakout mode — also overrides Zen's own
+   --zen-urlbar-background-base variable so their formula uses our color */
+:root:has(#theme-PywalZen[uc-pywalzen-darkness="default"]) #urlbar[breakout-extend="true"] > .urlbar-background {
+  --zen-urlbar-background-base: var(--lwt-accent-color, #1b1b1b) !important;
+  --zen-urlbar-background-transparent: var(--lwt-accent-color, #1b1b1b) !important;
+  background-color: var(--lwt-accent-color, #1b1b1b) !important;
+}
+
+:root:has(#theme-PywalZen[uc-pywalzen-darkness="pitch-black"]) #urlbar[breakout-extend="true"] > .urlbar-background {
+  --zen-urlbar-background-base: black !important;
+  --zen-urlbar-background-transparent: black !important;
+  background-color: black !important;
+}
+
+/* Floating urlbar (Ctrl+T new tab center overlay) */
+:root:has(#theme-PywalZen) #urlbar[zen-floating-urlbar="true"] > .urlbar-background {
+  --zen-urlbar-background-base: var(--zen-main-browser-background, var(--lwt-accent-color, #1b1b1b)) !important;
+  --zen-urlbar-background-transparent: var(--zen-main-browser-background, var(--lwt-accent-color, #1b1b1b)) !important;
+  background-color: var(--zen-main-browser-background, var(--lwt-accent-color, #1b1b1b)) !important;
+}
+
+#urlbar:not([focused="true"]):not([breakout-extend="true"]) > .urlbar-background {
   background: color-mix(
     in srgb,
     light-dark(#fff, var(--zen-colors-secondary)) 35%,
@@ -37,14 +50,4 @@
 
 #commonDialogWindow {
   background-color: black !important;
-}
-
-/* Floating urlbar / Ctrl+T new tab overlay */
-#urlbar[open][zen-floating-urlbar="true"] > .urlbar-background {
-  background-color: color-mix(
-    in srgb,
-    var(--lwt-accent-color, #1b1b1b) 75%,
-    white 25%
-  ) !important;
-  backdrop-filter: blur(20px) saturate(160%) !important;
 }
